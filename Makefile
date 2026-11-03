@@ -1,4 +1,4 @@
-.PHONY: help sync install hooks hooks-run test lint lint-fix format format-check typecheck audit ci check clean web
+.PHONY: help sync install hooks hooks-run test lint lint-fix format format-check typecheck audit ci check clean web rehearsal
 
 help: ## Lists all available Makefile commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-16s\033[0m %s\n", $$1, $$2}'
@@ -47,3 +47,6 @@ clean: ## Cleans build artifacts and caches
 
 web: ## Starts the ADK dev UI with the Box agent
 	uv run adk web src
+
+rehearsal: ## Runs the agent RUNS times and counts strategy leaks
+	uv run --env-file .env python -m box_pitwall.rehearsal --runs $(or $(RUNS),10)
