@@ -32,8 +32,10 @@ format-check: ## Verifies formatting with ruff without modifying files
 typecheck: ## Runs static type checking with pyright
 	uv run pyright
 
+# CVE-2026-114603 (opentelemetry-api): fix is in 1.45.1, but google-adk 2.13.0 pins
+# opentelemetry-api<=1.44. Remove the ignore once google-adk allows 1.45+.
 audit: ## Audits dependencies for known security vulnerabilities
-	uv run pip-audit
+	uv run pip-audit --ignore-vuln CVE-2026-114603
 
 ci: lint format-check typecheck audit test ## Runs full verification pipeline locally
 

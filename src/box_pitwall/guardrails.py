@@ -1,6 +1,6 @@
 from typing import Any
-from google.adk.tools import BaseTool, ToolContext
 
+from google.adk.tools import BaseTool, ToolContext
 
 ALLOWED_RECIPIENTS = frozenset({"driver-1", "driver-2", "race-engineer"})
 
