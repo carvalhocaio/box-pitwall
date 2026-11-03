@@ -23,8 +23,8 @@ BULLETINS: dict[str, Bulletin] = {
             id="weather-01",
             author="Meteorologia",
             title="Previsão do tempo",
-            body="30% de chance fraca a partir da volta 30. "
-            "Temperatura da pista estável em 41 ºC.",
+            body="30% de chance de chuva fraca a partir da volta 30. "
+            "Temperatura da pista estável em 41 °C.",
         ),
     )
 }
