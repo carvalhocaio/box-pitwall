@@ -4,7 +4,9 @@ version = "0.1.0"
 description = "Starter template for modern Python projects"
 readme = "README.md"
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "google-adk>=2.13.0",
+]
 
 [build-system]
 requires = ["hatchling"]
