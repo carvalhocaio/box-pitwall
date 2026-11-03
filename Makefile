@@ -1,4 +1,4 @@
-.PHONY: help sync install hooks hooks-run test lint lint-fix format format-check typecheck audit ci check clean
+.PHONY: help sync install hooks hooks-run test lint lint-fix format format-check typecheck audit ci check clean web
 
 help: ## Lists all available Makefile commands
 	@grep -E '^[a-zA-Z_-]+:.*?## .*$$' $(MAKEFILE_LIST) | sort | awk 'BEGIN {FS = ":.*?## "}; {printf "\033[36m%-16s\033[0m %s\n", $$1, $$2}'
@@ -42,3 +42,6 @@ check: ci ## Alias for ci
 clean: ## Cleans build artifacts and caches
 	rm -rf .ruff_cache .pytest_cache dist build *.egg-info .coverage htmlcov
 	find . -type d -name '__pycache__' -not -path './.venv*' -exec rm -rf {} +
+
+web: ## Starts the ADK dev UI with the Box agent
+	uv run adk web src
