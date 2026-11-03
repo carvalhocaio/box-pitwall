@@ -1,5 +1,5 @@
-import app_name
+import box_pitwall
 
 
 def test_version() -> None:
-    assert app_name.__version__ == "0.1.0"
+    assert box_pitwall.__version__ == "0.1.0"
