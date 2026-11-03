@@ -25,6 +25,7 @@ htmlcov/
 
 # Database
 *.sqlite3
+**/.adk/session.db
 
 # IDE / Editor files
 .idea/
