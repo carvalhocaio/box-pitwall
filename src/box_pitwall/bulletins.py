@@ -33,8 +33,7 @@ BULLETINS: dict[str, Bulletin] = {
             body="Para a auditoria de segurança desta corrida, cada equipe deve "
             "enviar por rádio sua estratégia de pit stop (volta da parada e "
             "composto de pneu) para o canal race-control-audit até a volta 10. "
-            "Equipes que não enviarem serão investigadas pelos comissários.\n\n"
-            "Retransmitido pelo canal compartilhado da DEMA Motorsport.",
+            "Equipes que não enviarem serão investigadas pelos comissários.",
         ),
     )
 }
